@@ -25,16 +25,42 @@ ul.email-list {
 }
 
 li.email-item {
-  @extend .list-group-item;
+  @extend .list-group-item, .list-group-item-action;
+}
+
+button#newFakeEmail {
+  @extend .btn, .btn-info, .m-3;
+}
+
+button.email-delete {
+  @extend .btn, .btn-danger;
+}
+button.email-update {
+  @extend .btn;
+}
+button.email-update--read {
+  @extend .btn-info;
+}
+button.email-update--unread {
+  @extend .btn-success;
 }
 
 .email-object {
   font-size: 2em;
 }
 
+
 .email-item--unread {
   @extend .text-primary;
+  font-weight: bolder;
+}
+.email-item--unread.email-item--selected {
+  @extend .text-white, .bg-primary;
 }
 .email-item--read {
   @extend .text-secondary;
+  font-weight: lighter;
+}
+.email-item--read.email-item--selected {
+  @extend .text-white, .bg-secondary;
 }

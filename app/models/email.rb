@@ -1,8 +1,8 @@
 class Email < ApplicationRecord
   def self.create_fake
     Email.create(
-      object: Faker::Book.title,
-      body: Faker::TvShows::Suits.quote,
+      object: Faker::TvShows::Suits.quote,
+      body: Faker::Lorem.paragraph(sentence_count: 40),
       read: false
     )
   end
