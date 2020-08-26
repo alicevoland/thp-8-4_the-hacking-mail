@@ -3,19 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'bootstrap';
 
-div.email-index, div.email-show{
+
+div.page {
   @extend .container;
 }
 
-div.email-index-container {
+div.page__head, div.page__main {
   @extend .row;
 }
 
-div.email-list-container {
+div.page__side {
   @extend .col-md-4;
 }
 
-div.email-details-container {
+div.page__content {
   @extend .col-md-8;
 }
 
@@ -25,4 +26,8 @@ ul.email-list {
 
 li.email-item {
   @extend .list-group-item;
+}
+
+.email-object {
+  font-size: 2em;
 }

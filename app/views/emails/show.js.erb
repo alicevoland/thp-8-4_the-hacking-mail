@@ -1,6 +1,9 @@
 function showEmail() {
-  let div = document.querySelector("div.email-details-container")
-  div.insertAdjacentHTML("afterbegin", "<%= j render partial: 'email', locals: {email: @email} %>")
+  let div = document.querySelector("div.page__content")
+  if (div.firstChild) {
+    div.firstChild.remove()
+  }
+  div.insertAdjacentHTML("afterbegin", "<%= j render partial: 'email', locals: {email: @email, remote: true} %>")
 }
 
 showEmail()
