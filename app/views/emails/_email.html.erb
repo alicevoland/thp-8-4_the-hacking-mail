@@ -1,4 +1,4 @@
-<div class="email-details" id="email-details-<%= email.id %>">
+<div class="email-details email-details--<%= email.read_status %>" id="email-details-<%= email.id %>">
   <div class="email-object">
     <p> <%= email.object %> </p>
   </div>
@@ -7,9 +7,10 @@
   </div>
   <div class="email-controls">
     <%= link_to email_path(email), {method: :delete, remote: remote} do %>
-      <button class="delete"> Supprimer </button>
+      <button class="email-delete"> Supprimer </button>
     <% end %>
-    <button> Marquer comme lu </button>
-    <button> Marquer comme non lu </button>
+    <%= link_to email_path(email), {method: :put, remote: remote} do %>
+      <button class="email-update"> <%= email.read ? "Marquer non lu" : "Marquer lu" %> </button>
+    <% end %>
   </div>
 </div>

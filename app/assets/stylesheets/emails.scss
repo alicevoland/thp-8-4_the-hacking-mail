@@ -31,3 +31,10 @@ li.email-item {
 .email-object {
   font-size: 2em;
 }
+
+.email-item--unread {
+  @extend .text-primary;
+}
+.email-item--read {
+  @extend .text-secondary;
+}
