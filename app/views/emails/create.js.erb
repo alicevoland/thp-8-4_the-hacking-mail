@@ -1,0 +1,6 @@
+function appendEmail() {
+  let ul = document.querySelector("ul.email-list")
+  ul.insertAdjacentHTML("afterbegin", "<%= j render partial: 'item', locals: {email: @email} %>")
+}
+
+appendEmail()

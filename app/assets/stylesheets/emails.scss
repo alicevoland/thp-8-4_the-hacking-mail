@@ -1,3 +1,28 @@
 // Place all the styles related to the emails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'bootstrap';
+
+div.email-index, div.email-show{
+  @extend .container;
+}
+
+div.email-index-container {
+  @extend .row;
+}
+
+div.email-list-container {
+  @extend .col-md-4;
+}
+
+div.email-details-container {
+  @extend .col-md-8;
+}
+
+ul.email-list {
+  @extend .list-group;
+}
+
+li.email-item {
+  @extend .list-group-item;
+}

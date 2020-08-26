@@ -1,7 +1,14 @@
 <div class="email-index">
-  <div class="email-list-container">
-    <%= render partial: 'list', locals: {emails: @emails} %>
+  <div class="email-index-controls">
+    <%= link_to emails_path, method: :post, remote: true do %>
+      <button id="nexFakeEmail">Nouvel email</button>
+    <% end %>
   </div>
-  <div class="email-details-container">
+  <div class="email-index-container">
+    <div class="email-list-container">
+      <%= render partial: 'list', locals: {emails: @emails} %>
+    </div>
+    <div class="email-details-container">
+    </div>
   </div>
 </div>
