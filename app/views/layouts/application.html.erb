@@ -1,15 +1,23 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>TheHackingMail</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<% content_for :navbar do %>
+  <%= render partial: "shared/navbar" %>
+<% end %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-  </head>
+<% content_for :jumbotron do %>
+  <%= render partial: "shared/jumbotron" %>
+<% end %>
 
-  <body>
-    <%= yield %>
-  </body>
-</html>
+<% content_for :alerts do %>
+  <%= render partial: "shared/alerts" %>
+<% end %>
+
+<% content_for :main do %>
+  <div class="container">
+    <%= content_for?(:application) ? yield(:application) : yield %>
+  </div>
+<% end %>
+
+<% content_for :footer do %>
+  <%= render partial: "shared/footer" %>
+<% end %>
+
+<%= render template: "layouts/main" %>

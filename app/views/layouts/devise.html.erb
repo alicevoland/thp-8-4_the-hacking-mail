@@ -1,0 +1,17 @@
+<% @page_title = "Form"%>
+<% content_for :application do %>
+  <div class="container d-flex justify-content-center">
+    <div class="col-lg-8">
+      <div class="card my-5 border-dark text-<%=@devise_color or 'secondary'%>">
+        <div class="card-header">
+          <h4> <%= @devise_title or "Formulaire" %> </h4>
+        </div>
+        <div class="card-body py-4">
+          <%= content_for?(:devise) ? yield(:devise) : yield %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<%= render template: 'layouts/application' %>
