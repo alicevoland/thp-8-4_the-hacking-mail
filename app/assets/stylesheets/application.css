@@ -13,8 +13,7 @@
  *
  *= require bootstrap
  *
- *
  *= require_tree .
- *= require_self
+ ** require_self
  *
  */

@@ -1,0 +1,33 @@
+@import "bootstrap";
+
+nav {
+  @extend .navbar, .navbar-expand-lg, .navbar-dark, .bg-primary;
+}
+
+nav div {
+  @extend .container;
+}
+
+nav .brand {
+  @extend .navbar-brand, .text-white;
+}
+
+div#navbar {
+  @extend .ml-auto, .collapse, .navbar-collapse;
+}
+
+div#navbar ul {
+  @extend .navbar-nav, .ml-auto;
+}
+
+div#navbar li {
+  @extend .nav-item;
+}
+
+div#navbar li > a {
+  @extend .nav-link, .text-white;
+}
+
+div#navbar div.dropdown-menu > a {
+  @extend .dropdown-item;
+}

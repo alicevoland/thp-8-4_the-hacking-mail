@@ -4,6 +4,8 @@
 
 Voir [site sur heroku](https://the-hacking-mail.herokuapp.com)
 
+Pour du CSS plus léger dans le HTML : [sass-semantically-extend-bootstrap](https://www.sitepoint.com/sass-semantically-extend-bootstrap/)
+
 
 ## Default README
 
