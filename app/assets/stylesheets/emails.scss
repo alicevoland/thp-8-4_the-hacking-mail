@@ -21,7 +21,7 @@ div.page__content {
 }
 
 ul.email-list {
-  @extend .list-group;
+  @extend .list-group, .border, .border-primary;
 }
 
 li.email-item {
@@ -43,6 +43,20 @@ button.email-update--read {
 }
 button.email-update--unread {
   @extend .btn-success;
+}
+
+.email-details {
+  @extend .p-4, .border;
+}
+.email-details--read {
+  @extend .border-dark;
+}
+.email-details--unread {
+  @extend .border-primary;
+}
+
+.email-details--unread .email-object{
+  @extend .text-primary;
 }
 
 .email-details--read .email-update--unread {

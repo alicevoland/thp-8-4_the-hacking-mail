@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 div.jumbotron {
-  @extend .jumbotron-fluid, .bg-info, .my-3, .py-3;
+  @extend .jumbotron-fluid, .container,  .bg-info, .my-3, .py-3;
 }
 
 div.jumbotron > div {
