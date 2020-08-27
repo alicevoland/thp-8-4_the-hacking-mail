@@ -5,7 +5,7 @@ function deleteEmail() {
   }
   let li = document.getElementById("email-item-<%= @email.id %>")
   if (li) {
-    li.remove()
+    li.parentElement.remove()
   }
 }
 
