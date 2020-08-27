@@ -45,6 +45,13 @@ button.email-update--unread {
   @extend .btn-success;
 }
 
+.email-details--read .email-update--unread {
+  display: none;
+}
+.email-details--unread .email-update--read {
+  display: none;
+}
+
 .email-object {
   font-size: 2em;
 }
@@ -64,3 +71,4 @@ button.email-update--unread {
 .email-item--read.email-item--selected {
   @extend .text-white, .bg-secondary;
 }
+
